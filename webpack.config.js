@@ -9,6 +9,15 @@ module.exports = {
         publicPath: '/',
         filename: '[name].js'
     },
+  externals: {
+    jsonld: '{}',
+    URL: 'self.URL',
+    'solid-auth-client': 'self.fetch',
+    'solid-auth-cli': '{}',
+    'universal-url': '{URL: self.URL}',
+    'whatwg-url': 'self.URL',
+    xmlhttprequest: 'self.XMLHttpRequest',
+  },
     devtool: 'none',
     devServer: {
         port: 8080
